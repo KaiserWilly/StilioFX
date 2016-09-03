@@ -5,7 +5,6 @@ import javafx.scene.Scene;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import rsc.Values;
 
 /**
  * Created by james on 7/21/2016.
@@ -29,7 +28,9 @@ public class MenuFrame extends Application {
 
     private static Scene createScene() {
         AnchorPane basePane = menuUI.menuPane();
-        return new Scene(basePane);
+        Scene menu = new Scene(basePane);
+        menu.getStylesheets().add("rsc/menu.css");
+        return menu;
     }
 
 }
